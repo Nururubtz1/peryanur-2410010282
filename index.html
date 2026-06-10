@@ -3,83 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tugas Cloud Computing | Portofolio Proyek</title>
+    <title>Tugas Cloud | Portofolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
     <style>
+        /* Pengaturan Dasar & Background */
         body {
+            background-color: #0b111e; /* Warna gelap khas referensi */
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
         }
-        main {
-            flex: 1;
+
+        /* Styling Navbar */
+        .navbar {
+            padding-top: 1.5rem;
         }
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #ffffff !important;
+        }
+        .nav-link {
+            color: #a0aabf !important; /* Warna teks menu agar sedikit abu-abu */
+            font-weight: 500;
+            margin-left: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #00d2ff !important; /* Warna Cyan saat aktif/hover */
+        }
+
+        /* Styling Teks Hero Section */
         .hero-section {
-            background-color: #f8f9fa;
-            padding: 4rem 0;
-            border-bottom: 1px solid #dee2e6;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            padding: 50px 0;
+        }
+        .hero-title {
+            font-weight: 700;
+            font-size: 3.5rem;
+            margin-bottom: 0.2rem;
+            letter-spacing: -1px;
+        }
+        .hero-subtitle {
+            color: #00d2ff; /* Warna aksen Cyan */
+            font-weight: 600;
+            font-size: 1.8rem;
+            margin-bottom: 1.2rem;
+        }
+        .hero-desc {
+            color: #a0aabf;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+            max-width: 90%;
+        }
+
+        /* Styling Tombol (Buttons) */
+        .btn-custom-solid {
+            background-color: #00d2ff;
+            color: #000000;
+            font-weight: 600;
+            border: 2px solid #00d2ff;
+            border-radius: 8px;
+            padding: 10px 28px;
+            transition: all 0.3s ease;
+        }
+        .btn-custom-solid:hover {
+            background-color: transparent;
+            color: #00d2ff;
+        }
+        .btn-custom-outline {
+            background-color: transparent;
+            color: #00d2ff;
+            font-weight: 600;
+            border: 2px solid #00d2ff;
+            border-radius: 8px;
+            padding: 10px 28px;
+            transition: all 0.3s ease;
+        }
+        .btn-custom-outline:hover {
+            background-color: #00d2ff;
+            color: #000000;
+        }
+
+        /* Styling Icon Sosial Media */
+        .social-icons a {
+            color: #00d2ff;
+            border: 1px solid #00d2ff;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            margin-right: 12px;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+        .social-icons a:hover {
+            background-color: #00d2ff;
+            color: #000;
+        }
+
+        /* Styling Gambar Profil */
+        .hero-img-container {
+            text-align: right;
+            position: relative;
+        }
+        .hero-img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 20px;
+            /* Efek bayangan neon di belakang foto */
+            filter: drop-shadow(-10px 15px 35px rgba(0, 210, 255, 0.15));
+        }
+
+        /* Responsivitas untuk layar HP */
+        @media (max-width: 991px) {
+            .hero-img-container {
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            .hero-desc {
+                max-width: 100%;
+            }
+            .navbar-collapse {
+                background-color: #121a2f;
+                padding: 1rem;
+                border-radius: 8px;
+                margin-top: 1rem;
+            }
+            .nav-link {
+                margin-left: 0;
+                margin-bottom: 0.5rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="#">Tugas Cloud FTI</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-toggle="target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#">Peryanur</a>
+            
+            <button class="navbar-toggler navbar-dark shadow-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Beranda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#tentang">Tentang Proyek</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <main>
-        <section class="hero-section text-center">
-            <div class="container">
-                <h1 class="display-4 fw-bold">Implementasi Cloud Computing</h1>
-                <p class="lead text-muted mt-3">Proyek *hosting* web statis menggunakan infrastruktur GitHub Pages.</p>
-                <a href="#tentang" class="btn btn-primary btn-lg mt-2">Pelajari Lebih Lanjut</a>
-            </div>
-        </section>
-
-        <section id="tentang" class="container my-5">
-            <div class="row justify-content-center">
-                <div class="col-md-8 text-center">
-                    <h2 class="mb-4">Detail Tugas</h2>
-                    <p>Halaman web statis ini dibuat sebagai bagian dari pemenuhan tugas mata kuliah Cloud Computing. Web ini dibangun menggunakan HTML5 dan kerangka kerja Bootstrap 5.3 untuk memastikan tampilan yang responsif.</p>
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                
+                <div class="col-lg-6 order-2 order-lg-1 mt-4 mt-lg-0">
+                    <h1 class="hero-title">Hi, I'm Peryanur</h1>
+                    <h2 class="hero-subtitle">Cloud / Web Developer</h2>
+                    <p class="hero-desc">
+                        Saya adalah mahasiswa Fakultas Teknologi Informassi. Halaman web ini dirancang menggunakan HTML, CSS, dan Bootstrap sebagai bagian dari implementasi tugas Cloud Computing, serta di-hosting menggunakan infrastruktur GitHub Pages.
+                    </p>
                     
-                    <div class="card mt-4 text-start">
-                        <div class="card-body">
-                            <h5 class="card-title">Informasi Mahasiswa</h5>
-                            <ul class="list-group list-group-flush mt-3">
-                                <li class="list-group-item"><strong>Nama Proyek:</strong> Web Hosting GitHub Pages</li>
-                                <li class="list-group-item"><strong>Fakultas:</strong> Teknologi Industri (FTI)</li>
-                                <li class="list-group-item"><strong>Angkatan:</strong> 2024</li>
-                                <li class="list-group-item"><strong>Teknologi:</strong> HTML, CSS, Bootstrap, Git</li>
-                            </ul>
-                        </div>
+                    <div class="d-flex gap-3 mb-5">
+                        <a href="#" class="btn btn-custom-solid">Hire Me</a>
+                        <a href="#" class="btn btn-custom-outline">Let's Talk</a>
+                    </div>
+                    
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
                     </div>
                 </div>
+                
+                <div class="col-lg-6 order-1 order-lg-2 hero-img-container">
+                    <img src="https://images.unsplash.com/photo-1550525811-e5869dd03032?auto=format&fit=crop&q=80&w=800&h=800" alt="Foto Profil" class="hero-img">
+                </div>
+                
             </div>
-        </section>
-    </main>
-
-    <footer class="bg-dark text-white text-center py-3">
-        <div class="container">
-            <p class="mb-0">&copy; 2026 Tugas Cloud Computing. Dihosting dengan ☕ melalui GitHub Pages.</p>
         </div>
-    </footer>
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
